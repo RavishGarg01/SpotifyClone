@@ -1,7 +1,9 @@
 import React,{useEffect, useState} from "react";
 import "../styles/Login.css"
 import Img from "../assets/spotifyLogo-removebg-preview.png"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+
 
 const getLocalItems=()=>{
   let list=localStorage.getItem("users")
@@ -12,6 +14,8 @@ const getLocalItems=()=>{
   return [];
 }
 const SignUpPage = () => {
+
+   const navigate=useNavigate();
 
   const [arr, setarr] = useState(getLocalItems)
   const[record,setRecord]=useState({
@@ -46,6 +50,10 @@ const SignUpPage = () => {
     
     
     setarr([...arr,record])
+    
+
+  
+   
    
     setRecord({
       name:"",
@@ -55,13 +63,22 @@ const SignUpPage = () => {
       confirm:""
     })
 
+    // navigate("/")
      
   }
 
   useEffect(()=>{
     console.log(arr);
-    localStorage.setItem("users",JSON.stringify(arr))
+localStorage.setItem("users",JSON.stringify(arr))
+    
  },[arr])
+
+
+  //  let userList=localStorage.getItem("users");
+  //  if(userList){
+  //  navigate("/");
+  //  }
+
 
   
 

@@ -36,8 +36,8 @@ const LoginPage = () => {
       return;
     }
   //  console.log(userList)
-    let user=userList.find(user=>user.email===res.email);
-    if(user?.password==res?.password){
+    let user=userList?.find(user=>user.email===res.email);
+    if(user?user.password==res.password:alert("Signup to login the website")){
       let gentoken="Ravish"
       setToken(gentoken);
       console.log(gentoken)    
