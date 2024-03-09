@@ -1,0 +1,37 @@
+.nav{
+    background-color: rgba(8, 8, 8, 0.438);
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+    height:10vh;
+    align-items: center;
+    position: fixed;
+
+   
+}
+
+.navigations{
+    margin-left: 20px;
+    
+    
+    button{
+        padding: 8px 10px;
+       background-color: black;
+        border:none;
+        border-radius: 50%;
+        color: white;
+        margin-right: 5px;
+    }
+
+   
+}
+
+.buttons{
+    button{
+    padding: 8px 10px;
+    border:none;
+    border-radius: 20px;
+    margin: 10px 10px;
+    }
+
+}

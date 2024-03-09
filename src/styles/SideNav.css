@@ -1,0 +1,11 @@
+.sidebar{
+    height:85vh;
+    width:30%;
+    /* background-color:rgba(41, 39, 39, 0.735); */
+    margin: 2vh 2vh;
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

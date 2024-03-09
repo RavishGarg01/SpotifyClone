@@ -1,0 +1,15 @@
+.createlist{
+    height: auto;
+    background-color:  rgba(50, 49, 49, 0.735);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    button{
+        padding: 8px 18px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: none;
+    }
+
+}

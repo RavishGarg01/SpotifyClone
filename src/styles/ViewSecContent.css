@@ -1,0 +1,28 @@
+.content{
+    /* height:calc(100%-10vh); */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 20px;
+    margin-top: 10vh;
+    row-gap: 20px;
+   
+    
+  
+    
+}
+
+.box{
+    width:20%;
+    height: auto;
+    background-color:rgba(41, 39, 39, 0.872);
+    right: 0;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+   
+  
+    
+}
