@@ -49,7 +49,7 @@ const ViewSectionNav = () => {
         <button on onClick={ClickHandler} style={{backgroundColor:'black',color:"white",borderRadius:"50%"}}>G</button>
       </div>
       </div>
-     { display && <div className="box" style={{margin:"10vh 0" }}>
+     { display && <div className="box" style={{margin:"10vh 0", zIndex:"99" }}>
         <ul>
           <li><Link to="user">Profile</Link></li>
           <li><Link to="" onClick={logout}>Logout</Link></li>

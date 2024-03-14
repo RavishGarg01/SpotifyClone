@@ -8,6 +8,8 @@ import SignUpPage from "../pages/SignUpPage";
 import LoginPage from "../pages/LoginPage";
 
 import SearchPage from "../pages/SearchPage";
+import NameListModal from "../components/NameListModal";
+import SingersAlbum from "../components/SingersAlbum";
 
 const MyRoutes = () => {
   let token = localStorage.getItem('token');
@@ -59,6 +61,8 @@ return (
             <Route path="create/playlist" element={<CreatePlayListPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="search" element={<SearchPage />} />
+            <Route path="modal" element={<NameListModal/>}/>
+            <Route path="singer/album" element={<SingersAlbum/>}/>
           </Route>
         </Route>
       </Routes>

@@ -5,6 +5,7 @@ import SideNav from "../components/SideNav"
 import { Outlet } from 'react-router-dom';
 import '../App.css';
 import ViewSectionNav from '../components/ViewSectionNav';
+import "../styles/Layout.css"
 
 const BasicLayout = () => {
   return (
@@ -13,13 +14,12 @@ const BasicLayout = () => {
 
     <SideNav />
     
-    <div style={{backgroundColor:" rgba(25, 24, 24, 0.735)",height:"86vh",width:"68%",margin:"10px 10px 0 0", borderRadius:"10px"}}>
+    <div className='main' >
     <ViewSectionNav />
      <Outlet />
      </div>
     </div>
     <Header />
-      
     </>
   )
 }

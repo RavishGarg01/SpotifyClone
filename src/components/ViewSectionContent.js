@@ -14,7 +14,7 @@ const ViewSectionContent = () => {
          
           return(
             
-            <SingleSongCard   key={index} id={index} title={element.title} imgsrc={element.image_url} desc={element.description}/>
+            <SingleSongCard    key={index} id={index} title={element.name} imgsrc={element.image_url} desc={element.description} ele={element}/>
             
           )
           

@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
      <div className="header">
-      <div style={{color:"white", marginLeft:"50px", width:"25%"}}>
+      <div  className="left-area">
         <h3>abcdef</h3>
         <h6>ravishgarg</h6>
       </div>
@@ -25,7 +25,7 @@ const Header = () => {
           </ul>
           <div className="line" style={{height:"3px",width:"150%",backgroundColor:"gray",textAlign:"center",borderRadius:"5px"}}></div>
         </div>
-        <div className='controls' >
+        <div className='right-area' >
           <ul>
             <li><a><PlaySquareOutlined /></a></li>
             <li><a><i class="fa-solid fa-list"></i></a></li>

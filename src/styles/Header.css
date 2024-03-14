@@ -1,42 +1,98 @@
-.header{
-    height:12vh;
-    width:100%;
-    background-color: black;
+.header {
+  height: 12vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+
+  .controls {
     display: flex;
-    justify-content: space-between;
-       
-    
-    
 
-    .controls {
-        display: flex;
-       
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .controls ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .controls ul li {
+    display: inline-block;
+    gap: 10px;
+
+    a {
+      color: gray;
+      font-size: 1.5rem;
     }
-    .controls ul{
-        display: flex;
-        /* justify-content: center; */
-        gap: 20px;
+
+}
+  .right-area {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .right-area ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .right-area ul li {
+    display: inline-block;
+    gap: 10px;
+
+    a {
+      color: gray;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* .controls-left {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+  } */
+
+  .left-area {
+    color: white;
+    margin-left: 50px;
+    width: 25%;
+  }
+
+  
+}
+
+@media (max-width: 650px) {
+  .controls-left {
+    background-color: red;
+  }
+  .left-area{
+    display: none;
+  }
+
+
+  .right-area{
+    display: none;
+  }
+    .right-area ul{
+        display: none;
     }
 
-    .controls ul li{
-        display: inline-block;
-        gap:10px;
-
+    .right-area ul li{
+        display: none;
         a{
-            color: gray;
-            font-size: 1.5rem;
+            display: none;
         }
-
     }
 
-    .controls-left {
+    .header{
         display: flex;
-       
+        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 5px;
     }
+
+  
 }

@@ -1,19 +1,21 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import "../styles/SingleCard.css"
 
-const play=(id)=>{
-  console.log(id)
-}
-  
 
 
 const SingleSongCard = (props) => {
+  const navigate=useNavigate();
+  const play=()=>{
+     navigate("singer/album",{state:{...props.ele}})
+  }
   
   return (
     <div>
-      <div class="card " onClick={play} style={{height:"55vh",width:"95%",padding:"10px", backgroundColor:" rgba(41, 39, 39, 0.735)", borderRadius:"10px"}}>
+      <div className="cards" onClick={play} >
   <img src={props.imgsrc} alt="Avatar"  style={{height:"50%",width:"100%",borderRadius:"10px"}} />
   <div class="container">
-    <h4 style={{color:"white"}}><b>{props.title}</b></h4>
+    <h6 style={{color:"white", marginTop:"5px"}}><b>{props.title}</b></h6>
     <p style={{color:"white"}}>{props.desc}</p>
     
   </div>

@@ -1,0 +1,44 @@
+.desc{
+    height:15rem;
+    width: 100%;
+    margin-top: 10vh;
+    /* background-color: aqua; */
+    padding:10px;
+    display: flex;
+    gap:30px;
+}
+
+.white{
+    color: white;
+}
+
+.white::-webkit-scrollbar{
+    display: none;
+}
+
+h2{
+    margin: 0;
+}
+
+table{
+    width:80%;
+    margin:auto;
+    /* border: 2px solid white; */
+    border-collapse: collapse;
+
+    
+
+    td,tr{
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+        padding:10px
+
+    }
+}
+
+@media (max-width:650px) {
+    h2{
+        margin-top: 20px;
+    }
+    
+}

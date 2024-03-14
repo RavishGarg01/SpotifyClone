@@ -1,5 +1,5 @@
 .down{
-    height: 79%;
+    height: 75%;
     width: 100%;
     background-color:   rgba(25, 24, 24, 0.735);
     color: white;
@@ -8,8 +8,8 @@
     border-radius: 10px;
     
     .sidecols{
-        height: 80%;
-        margin-top: 10%;
+        height: 78%;
+        margin-top: 8%;
         overflow-y:scroll;
 
     &::-webkit-scrollbar{
