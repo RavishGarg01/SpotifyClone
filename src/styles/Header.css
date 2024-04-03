@@ -1,9 +1,9 @@
 .header {
-  height: 12vh;
+  height: 10vh;
   width: 100%;
   background-color: black;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  justify-content: center;
 
   .controls {
     display: flex;

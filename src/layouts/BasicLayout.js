@@ -7,7 +7,7 @@ import '../App.css';
 import ViewSectionNav from '../components/ViewSectionNav';
 import "../styles/Layout.css"
 
-const BasicLayout = () => {
+const BasicLayout = ({isSongPlay}) => {
   return (
     <>
     <div className="sections">
@@ -19,7 +19,7 @@ const BasicLayout = () => {
      <Outlet />
      </div>
     </div>
-    <Header />
+    <Header isSongPlay={isSongPlay}  />
     </>
   )
 }

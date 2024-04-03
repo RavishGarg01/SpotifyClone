@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate,Outlet } from "react-router-dom";
 import BasicLayout from "../layouts/BasicLayout";
 import ViewSection from "../pages/ViewSection";
@@ -10,10 +10,12 @@ import LoginPage from "../pages/LoginPage";
 import SearchPage from "../pages/SearchPage";
 import NameListModal from "../components/NameListModal";
 import SingersAlbum from "../components/SingersAlbum";
+import PlayListPage from "../pages/PlayListPage";
 
 const MyRoutes = () => {
   let token = localStorage.getItem('token');
 
+  const [isSongPlay,setIsSongPlay]=useState(null);
 
 
   // This function is used for Authentication when user's credentials will be invalid.
@@ -60,9 +62,10 @@ return (
             <Route path="user" element={<UserDataPage />} />
             <Route path="create/playlist" element={<CreatePlayListPage />} />
             <Route path="login" element={<LoginPage />} />
-            <Route path="search" element={<SearchPage />} />
+            <Route path="search" element={<SearchPage setIsSongPlay={setIsSongPlay} />} />
             <Route path="modal" element={<NameListModal/>}/>
-            <Route path="singer/album" element={<SingersAlbum/>}/>
+            <Route path="singer/album" element={<SingersAlbum setIsSongPlay={setIsSongPlay}/>}/>
+            <Route path="playlist" element={<PlayListPage setIsSongPlay={setIsSongPlay} />}/>
           </Route>
         </Route>
       </Routes>

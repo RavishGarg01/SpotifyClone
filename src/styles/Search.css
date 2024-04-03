@@ -1,0 +1,17 @@
+.result{
+    overflow-y: scroll;
+    height:20rem;
+    width: 60%;
+    margin: auto;
+
+    li{
+        font-size: large;
+    }
+    li:hover{
+        cursor: pointer;
+    }
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

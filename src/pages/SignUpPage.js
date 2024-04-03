@@ -19,11 +19,13 @@ const SignUpPage = () => {
 
   const [arr, setarr] = useState(getLocalItems)
   const[record,setRecord]=useState({
+    id:"",
     name:"",
     email:"",
     phone:"",
     password:"",
-    confirm:""
+    confirm:"",
+  
 
   })
 
@@ -31,9 +33,11 @@ const SignUpPage = () => {
 
   const inputHandler=(e)=>{
     const{name,value}=e.target;
-    setRecord({...record,[name]:value})
+    setRecord({...record,id:arr.length+1,[name]:value})
     
   }
+
+  console.log(record)
 
   const SubmitHandler=(e)=>{
     e.preventDefault();
@@ -48,7 +52,7 @@ const SignUpPage = () => {
      }
     
     
-    
+     
     setarr([...arr,record])
     
 
@@ -69,7 +73,7 @@ const SignUpPage = () => {
 
   useEffect(()=>{
     console.log(arr);
-localStorage.setItem("users",JSON.stringify(arr))
+    localStorage.setItem("users",JSON.stringify(arr))
     
  },[arr])
 
@@ -92,7 +96,7 @@ localStorage.setItem("users",JSON.stringify(arr))
             <img src={Img} alt="" />
         </div>
         <div className="right">
-        <h1 style={{color:"white", margin:"20px 0"}}>SignUp Here</h1>
+        <h2 style={{color:"white", margin:"20px 0"}}>SignUp Here</h2>
       <form  onSubmit={SubmitHandler}>
         <label htmlFor="fname">First name:</label>
         <br />

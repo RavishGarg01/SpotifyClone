@@ -1,10 +1,11 @@
 .desc{
-    height:15rem;
+    height:14rem;
     width: 100%;
     margin-top: 10vh;
     /* background-color: aqua; */
     padding:10px;
     display: flex;
+    align-items: center;
     gap:30px;
 }
 
@@ -31,10 +32,23 @@ table{
     td,tr{
         border-bottom: 2px solid white;
         border-top: 2px solid white;
-        padding:10px
+        padding:10px;
+
+
+
 
     }
+
+    li i:hover{
+        cursor: pointer;
+    }
+
+    td,tr:hover{
+        cursor: pointer;
+    }
 }
+
+
 
 @media (max-width:650px) {
     h2{

@@ -8,13 +8,19 @@ const LoginPage = () => {
   const userList=JSON.parse(localStorage.getItem("users"));
 
 
+
   const navigate=useNavigate();
 
   const[token,setToken]=useState("")
+  const[loggedUser,setLoggedUser]=useState({});
 
   useEffect(()=>{
       localStorage.setItem("token",token);
   },[token])
+
+  useEffect(()=>{
+    localStorage.setItem("loggedUser",JSON.stringify(loggedUser))
+  },[loggedUser])
 
   const[res,setRes]=useState({
     email:"",
@@ -40,6 +46,7 @@ const LoginPage = () => {
     if(user?user.password==res.password:alert("Signup to login the website")){
       let gentoken="Ravish"
       setToken(gentoken);
+      setLoggedUser(user);
       console.log(gentoken)    
       window.location.reload();
     }
